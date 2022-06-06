@@ -1,0 +1,39 @@
+<h1 class="text-center">Gestor de Proyectos</h1>
+<form method="get" action="/projects/list">
+  
+  <div id="create_project" class="form-group">
+    <label for="name">Nombre proyecto</label>
+    <input id="name" name="name" class="form-control" placeholder="Escriba el nombre del proyecto">
+  </div>
+  <br> 
+  <div class="form-group">
+    <label for="description">Descripción del proyecto</label>
+    <input name="description" class="form-control" placeholder="Describa el proyecto">
+  </div>
+  <br> 
+  
+  <div class="form-group ">
+    <label for="date_start">Fecha de inicio</label>
+    <input id="date_start" name="created_at" class="form-control" placeholder="Ingrese fecha de inicio">
+  </div>
+  <br>
+  <div class="form-group ">
+    <label for="date_finish">Fecha de termino</label>
+    <input id="date_finish" name="finish_date" class="form-control" placeholder="Ingrese fecha de termino">
+  </div>
+  <br>
+
+  <label for="state">Estado</label>
+  <select name="state" id="state">
+    <option value="propuesta">Propuesta</option>
+    <option value="progreso">Progreso</option>
+    <option value="Terminado">Terminado</option>
+  </select>
+  <br>
+  <br>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+ 
+</form>
+ <br>
+ <%= link_to("Listado de proyectos", "/projects/list") %>
